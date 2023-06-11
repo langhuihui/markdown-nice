@@ -1,6 +1,8 @@
 import axios from "axios";
 import MarkdownIt from "markdown-it";
 import markdownItMath from "./markdown-it-math";
+import markdownItTextualUML from "markdown-it-textual-uml";
+
 import markdownItDeflist from "markdown-it-deflist";
 import markdownItImplicitFigures from "markdown-it-implicit-figures";
 import markdownItTableOfContents from "markdown-it-table-of-contents";
@@ -82,6 +84,7 @@ markdownParser
   .use(markdownItSpan) // 在标题标签中添加span
   .use(markdownItTableContainer) // 在表格外部添加容器
   .use(markdownItMath) // 数学公式
+  .use(markdownItTextualUML) // 数学公式
   .use(markdownItLinkfoot) // 修改脚注
   .use(markdownItTableOfContents, {
     transformLink: () => "",
